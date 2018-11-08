@@ -1,0 +1,55 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+def rx_swift
+    pod 'RxSwift', '~> 4.0'
+end
+
+def rx_cocoa
+    pod 'RxCocoa', '~> 4.0'
+end
+
+def test_pods
+    pod 'RxTest'
+    pod 'RxBlocking'
+end
+
+target 'Domain' do
+	use_frameworks!
+	rx_swift
+
+	target 'DomainTests' do
+		inherit! :search_paths
+    		test_pods
+  	end
+end
+
+target 'Login' do
+  	use_frameworks!
+
+  	# Pods for Login
+	rx_swift
+	rx_cocoa
+
+  	target 'LoginTests' do
+    		inherit! :search_paths
+		test_pods
+  	end
+
+  	target 'LoginUITests' do
+    		inherit! :search_paths
+    		test_pods
+  	end
+end
+
+target 'Network' do
+	use_frameworks!
+	rx_swift
+	pod 'Firebase/Auth'
+	pod 'Firebase/Database'
+
+  	target 'NetworkTests' do
+    		inherit! :search_paths
+		test_pods
+  	end
+end
