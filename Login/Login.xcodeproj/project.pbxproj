@@ -24,6 +24,11 @@
 		2E2D933E21945228005127B7 /* Network.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E2D932E21945228005127B7 /* Network.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2E2D934121945228005127B7 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2D932C21945228005127B7 /* Network.framework */; };
 		2E2D934221945228005127B7 /* Network.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2D932C21945228005127B7 /* Network.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2E2D934B219452EA005127B7 /* UseCasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D934A219452EA005127B7 /* UseCasesProvider.swift */; };
+		2E2D934E2194532D005127B7 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D934D2194532D005127B7 /* LoginUseCase.swift */; };
+		2E2D935021945338005127B7 /* NetworkUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D934F21945338005127B7 /* NetworkUseCase.swift */; };
+		2E2D93522194540E005127B7 /* UserInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D93512194540E005127B7 /* UserInfos.swift */; };
+		2E2D93562194566E005127B7 /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D93552194566E005127B7 /* RegisterUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +131,11 @@
 		2E2D933421945228005127B7 /* NetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2D933B21945228005127B7 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		2E2D933D21945228005127B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E2D934A219452EA005127B7 /* UseCasesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesProvider.swift; sourceTree = "<group>"; };
+		2E2D934D2194532D005127B7 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		2E2D934F21945338005127B7 /* NetworkUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUseCase.swift; sourceTree = "<group>"; };
+		2E2D93512194540E005127B7 /* UserInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfos.swift; sourceTree = "<group>"; };
+		2E2D93552194566E005127B7 /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +257,7 @@
 		2E2D930A219451CC005127B7 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				2E2D9349219452BE005127B7 /* UseCases */,
 				2E2D930B219451CC005127B7 /* Domain.h */,
 				2E2D930C219451CC005127B7 /* Info.plist */,
 			);
@@ -278,6 +289,26 @@
 				2E2D933D21945228005127B7 /* Info.plist */,
 			);
 			path = NetworkTests;
+			sourceTree = "<group>";
+		};
+		2E2D9349219452BE005127B7 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				2E2D934C219452FC005127B7 /* Entries */,
+				2E2D934A219452EA005127B7 /* UseCasesProvider.swift */,
+				2E2D934D2194532D005127B7 /* LoginUseCase.swift */,
+				2E2D934F21945338005127B7 /* NetworkUseCase.swift */,
+				2E2D93552194566E005127B7 /* RegisterUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		2E2D934C219452FC005127B7 /* Entries */ = {
+			isa = PBXGroup;
+			children = (
+				2E2D93512194540E005127B7 /* UserInfos.swift */,
+			);
+			path = Entries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,6 +486,7 @@
 					};
 					2E2D9308219451CC005127B7 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					2E2D9310219451CC005127B7 = {
 						CreatedOnToolsVersion = 10.1;
@@ -578,6 +610,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E2D93522194540E005127B7 /* UserInfos.swift in Sources */,
+				2E2D935021945338005127B7 /* NetworkUseCase.swift in Sources */,
+				2E2D934B219452EA005127B7 /* UseCasesProvider.swift in Sources */,
+				2E2D93562194566E005127B7 /* RegisterUseCase.swift in Sources */,
+				2E2D934E2194532D005127B7 /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -788,6 +825,7 @@
 		2E2D92FC2194513D005127B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G74U458KDF;
@@ -806,6 +844,7 @@
 		2E2D92FD2194513D005127B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G74U458KDF;
@@ -906,6 +945,7 @@
 		2E2D9321219451CC005127B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -924,6 +964,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.benmeddour.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -934,6 +975,7 @@
 		2E2D9322219451CC005127B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
