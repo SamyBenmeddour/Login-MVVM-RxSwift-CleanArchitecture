@@ -27,9 +27,14 @@
 		2E2D934221945228005127B7 /* Network.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2D932C21945228005127B7 /* Network.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2E2D934B219452EA005127B7 /* UseCasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D934A219452EA005127B7 /* UseCasesProvider.swift */; };
 		2E2D934E2194532D005127B7 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D934D2194532D005127B7 /* LoginUseCase.swift */; };
-		2E2D935021945338005127B7 /* NetworkUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D934F21945338005127B7 /* NetworkUseCase.swift */; };
 		2E2D93522194540E005127B7 /* UserInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D93512194540E005127B7 /* UserInfos.swift */; };
 		2E2D93562194566E005127B7 /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D93552194566E005127B7 /* RegisterUseCase.swift */; };
+		2E2D935C21946EC1005127B7 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D935B21946EC1005127B7 /* Network.swift */; };
+		2E2D935E21946EE2005127B7 /* FirebaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D935D21946EE2005127B7 /* FirebaseNetwork.swift */; };
+		2E2D936121947502005127B7 /* Firebase+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D936021947502005127B7 /* Firebase+Rx.swift */; };
+		2E2D936721947BB0005127B7 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D936621947BB0005127B7 /* UseCaseProvider.swift */; };
+		2E2D936921948378005127B7 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D936821948378005127B7 /* LoginUseCase.swift */; };
+		2E2D936B21948866005127B7 /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D936A21948866005127B7 /* RegisterUseCase.swift */; };
 		402B772CA4FAF07F6CD90AA4 /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB299A8BDC33FAF3220C3D5 /* Pods_DomainTests.framework */; };
 		48FD25DDAFA41D41B98F9728 /* Pods_Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2867C11AEC81BC1126DE754 /* Pods_Network.framework */; };
 		79AF364D94EA0CA5F563B797 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB0B3F4848F80FB03DFB486 /* Pods_Domain.framework */; };
@@ -145,9 +150,14 @@
 		2E2D933D21945228005127B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E2D934A219452EA005127B7 /* UseCasesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesProvider.swift; sourceTree = "<group>"; };
 		2E2D934D2194532D005127B7 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
-		2E2D934F21945338005127B7 /* NetworkUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUseCase.swift; sourceTree = "<group>"; };
 		2E2D93512194540E005127B7 /* UserInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfos.swift; sourceTree = "<group>"; };
 		2E2D93552194566E005127B7 /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
+		2E2D935B21946EC1005127B7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		2E2D935D21946EE2005127B7 /* FirebaseNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetwork.swift; sourceTree = "<group>"; };
+		2E2D936021947502005127B7 /* Firebase+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Rx.swift"; sourceTree = "<group>"; };
+		2E2D936621947BB0005127B7 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
+		2E2D936821948378005127B7 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		2E2D936A21948866005127B7 /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
 		2E45CDB67503447E91685EF5 /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
 		5C444B8D981746AAF914B672 /* Pods-LoginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginTests/Pods-LoginTests.release.xcconfig"; sourceTree = "<group>"; };
 		6302163B4EF5A9E72E8D3CB1 /* Pods-Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Login/Pods-Login.debug.xcconfig"; sourceTree = "<group>"; };
@@ -334,6 +344,8 @@
 		2E2D932D21945228005127B7 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				2E2D935A21946EB3005127B7 /* Network */,
+				2E2D935821946D89005127B7 /* UseCases */,
 				2E2D932E21945228005127B7 /* Network.h */,
 				2E2D932F21945228005127B7 /* Info.plist */,
 			);
@@ -355,7 +367,6 @@
 				2E2D934C219452FC005127B7 /* Entries */,
 				2E2D934A219452EA005127B7 /* UseCasesProvider.swift */,
 				2E2D934D2194532D005127B7 /* LoginUseCase.swift */,
-				2E2D934F21945338005127B7 /* NetworkUseCase.swift */,
 				2E2D93552194566E005127B7 /* RegisterUseCase.swift */,
 			);
 			path = UseCases;
@@ -367,6 +378,34 @@
 				2E2D93512194540E005127B7 /* UserInfos.swift */,
 			);
 			path = Entries;
+			sourceTree = "<group>";
+		};
+		2E2D935821946D89005127B7 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				2E2D936621947BB0005127B7 /* UseCaseProvider.swift */,
+				2E2D936821948378005127B7 /* LoginUseCase.swift */,
+				2E2D936A21948866005127B7 /* RegisterUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		2E2D935A21946EB3005127B7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2E2D935F219474D7005127B7 /* Firebase */,
+				2E2D935B21946EC1005127B7 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2E2D935F219474D7005127B7 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				2E2D935D21946EE2005127B7 /* FirebaseNetwork.swift */,
+				2E2D936021947502005127B7 /* Firebase+Rx.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		42794F613B4934DF54167213 /* Frameworks */ = {
@@ -578,6 +617,7 @@
 					};
 					2E2D932B21945228005127B7 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					2E2D933321945228005127B7 = {
 						CreatedOnToolsVersion = 10.1;
@@ -944,7 +984,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E2D93522194540E005127B7 /* UserInfos.swift in Sources */,
-				2E2D935021945338005127B7 /* NetworkUseCase.swift in Sources */,
 				2E2D934B219452EA005127B7 /* UseCasesProvider.swift in Sources */,
 				2E2D93562194566E005127B7 /* RegisterUseCase.swift in Sources */,
 				2E2D934E2194532D005127B7 /* LoginUseCase.swift in Sources */,
@@ -963,6 +1002,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E2D936B21948866005127B7 /* RegisterUseCase.swift in Sources */,
+				2E2D935C21946EC1005127B7 /* Network.swift in Sources */,
+				2E2D935E21946EE2005127B7 /* FirebaseNetwork.swift in Sources */,
+				2E2D936121947502005127B7 /* Firebase+Rx.swift in Sources */,
+				2E2D936721947BB0005127B7 /* UseCaseProvider.swift in Sources */,
+				2E2D936921948378005127B7 /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1388,6 +1433,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0409324BCD283D125DB89C27 /* Pods-Network.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1406,6 +1452,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.benmeddour.Network;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1417,6 +1464,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9C9FC451170E52B228FE01EF /* Pods-Network.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

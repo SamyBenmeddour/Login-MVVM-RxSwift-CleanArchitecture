@@ -6,12 +6,10 @@
 //  Copyright © 2018 Benmeddour. All rights reserved.
 //
 
-protocol UseCasesProvider {
+public protocol UseCasesProvider {
     
     func makeLoginUseCase() -> LoginUseCase
-    
-    func makeNetworkUseCase() -> NetworkUseCase
-    
+        
     func makeRegisterUseCase() -> RegisterUseCase
     
 }

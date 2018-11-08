@@ -11,7 +11,7 @@ public struct UserInfos {
     let UUID: String
     let email: String
     
-    init(UUID: String, email: String) {
+    public init(UUID: String, email: String) {
         self.UUID = UUID
         self.email = email
     }
