@@ -8,19 +8,19 @@
 
 import Domain
 
-final class UseCasesProvider : Domain.UseCasesProvider {
+public final class UseCasesProvider : Domain.UseCasesProvider {
     
-    private let service: Network
+    private let service: NetworkProtocol
     
-    public init(with networkService: Network) {
+    public init(with networkService: NetworkProtocol) {
         self.service = networkService
     }
     
-    func makeLoginUseCase() -> Domain.LoginUseCase {
+    public func makeLoginUseCase() -> Domain.LoginUseCase {
         return LoginUseCase(service: self.service)
     }
     
-    func makeRegisterUseCase() -> Domain.RegisterUseCase {
+    public func makeRegisterUseCase() -> Domain.RegisterUseCase {
         return RegisterUseCase(service: self.service)
     }
 

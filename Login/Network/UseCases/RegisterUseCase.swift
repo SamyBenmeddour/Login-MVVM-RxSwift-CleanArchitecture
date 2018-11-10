@@ -11,9 +11,9 @@ import Domain
 
 final class RegisterUseCase: Domain.RegisterUseCase {
     
-    var networkService: Network
+    var networkService: NetworkProtocol
     
-    init(service: Network) {
+    init(service: NetworkProtocol) {
         self.networkService = service
     }
     

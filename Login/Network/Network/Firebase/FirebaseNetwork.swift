@@ -13,17 +13,21 @@ import FirebaseDatabase
 
 import Domain
 
-class FirebaseNetwork: Network {
+public class FirebaseNetwork: NetworkProtocol {
     
-    func initNetwork() {
+    public init() {
+        
+    }
+    
+    public func initNetwork() {
         FirebaseApp.configure()
     }
     
-    func login(email: String, password: String) -> Observable<UserInfos> {
+    public func login(email: String, password: String) -> Observable<UserInfos> {
         return Auth.auth().rx_signinWithEmail(email: email, password: password)
     }
     
-    func register(email: String, password: String) -> Observable<Bool> {
+    public func register(email: String, password: String) -> Observable<Bool> {
         return Auth.auth().rx_createUserWithEmail(email: email, password: password)
     }
 

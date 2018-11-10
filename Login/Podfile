@@ -42,13 +42,13 @@ target 'Login' do
   	end
 end
 
-target 'Network' do
+target 'NetworkPlatform' do
 	use_frameworks!
 	rx_swift
 	pod 'Firebase/Auth'
 	pod 'Firebase/Database'
 
-  	target 'NetworkTests' do
+  	target 'NetworkPlatformTests' do
     		inherit! :search_paths
 		test_pods
   	end

@@ -8,8 +8,8 @@
 
 public struct UserInfos {
     
-    let UUID: String
-    let email: String
+    public let UUID: String
+    public let email: String
     
     public init(UUID: String, email: String) {
         self.UUID = UUID
