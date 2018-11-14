@@ -17,7 +17,7 @@ final class RegisterUseCase: Domain.RegisterUseCase {
         self.networkService = service
     }
     
-    func register(email: String, password: String) -> Observable<Bool> {
+    func register(email: String, password: String) -> Observable<Void> {
         return networkService.register(email: email, password: password)
     }
     

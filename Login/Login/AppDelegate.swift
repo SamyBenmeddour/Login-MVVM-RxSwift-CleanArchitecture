@@ -12,10 +12,15 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Application.shared.configureNetwork()
+        
+        let _window = UIWindow(frame: UIScreen.main.bounds)
+        
+        Application.shared.configureMainInterface(in: _window)
+        
+        self.window = _window
         return true
     }
 

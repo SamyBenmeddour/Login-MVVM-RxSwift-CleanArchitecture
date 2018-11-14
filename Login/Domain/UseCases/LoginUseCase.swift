@@ -10,7 +10,6 @@ import RxSwift
 
 public protocol LoginUseCase {
     
-    func login(email: String, password: String) -> Observable<Bool>
+    func login(with credentials: Credentials) -> Observable<Void>
     
-    func signOut() -> Observable<Bool>
 }

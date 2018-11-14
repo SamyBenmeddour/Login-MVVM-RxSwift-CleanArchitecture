@@ -17,13 +17,11 @@ final class LoginUseCase: Domain.LoginUseCase {
         self.networkService = service
     }
     
-    func login(email: String, password: String) -> Observable<Bool> {
-        print("LoginUseCase.login")
-        return networkService.login(email: email, password: password)
+    func login(with credentials: Credentials) -> Observable<Void> {
+        return networkService.login(with: credentials)
     }
     
-    func signOut() -> Observable<Bool> {
-        print("LoginUseCase.signOut")
+    func signOut() -> Observable<Void> {
         return networkService.signOut()
     }
     

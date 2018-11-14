@@ -24,4 +24,8 @@ public final class UseCasesProvider : Domain.UseCasesProvider {
         return RegisterUseCase(service: self.service)
     }
     
+    public func makeLogoutUseCase() -> Domain.LogoutUseCase {
+        return LogoutUseCase(service: self.service)
+    }
+    
 }

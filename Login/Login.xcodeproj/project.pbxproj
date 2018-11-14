@@ -24,7 +24,6 @@
 		2E2D93562194566E005127B7 /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D93552194566E005127B7 /* RegisterUseCase.swift */; };
 		2E2D937021949404005127B7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D936F21949404005127B7 /* LoginViewModel.swift */; };
 		2E2D937221949412005127B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D937121949412005127B7 /* LoginViewController.swift */; };
-		2E2D937421949462005127B7 /* LoginNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D937321949462005127B7 /* LoginNavigator.swift */; };
 		2E2D937A219494E3005127B7 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D9379219494E3005127B7 /* ViewModelType.swift */; };
 		2E2D937D219495D7005127B7 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D937C219495D7005127B7 /* ActivityIndicator.swift */; };
 		2E2D937F219495E2005127B7 /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D937E219495E2005127B7 /* Observable+Ext.swift */; };
@@ -41,6 +40,11 @@
 		2E2D93B02194AEAD005127B7 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D93AF2194AEAD005127B7 /* NetworkProtocol.swift */; };
 		2E2D93B22194AEBE005127B7 /* FirebaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D93B12194AEBE005127B7 /* FirebaseNetwork.swift */; };
 		2E2D93B42194AECD005127B7 /* Firebase+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D93B32194AECD005127B7 /* Firebase+Rx.swift */; };
+		2E350CDE2199BB8E007A51D2 /* LogoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350CDD2199BB8E007A51D2 /* LogoutViewModel.swift */; };
+		2E350CE02199BB99007A51D2 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350CDF2199BB99007A51D2 /* LogoutViewController.swift */; };
+		2E350CE42199BF25007A51D2 /* LogoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350CE32199BF25007A51D2 /* LogoutUseCase.swift */; };
+		2E350CE62199C2A5007A51D2 /* LogoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350CE52199C2A5007A51D2 /* LogoutUseCase.swift */; };
+		2E350CE82199E565007A51D2 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350CE72199E565007A51D2 /* Credentials.swift */; };
 		2EF0E10821959CFD001A4858 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EF0E10721959CFD001A4858 /* GoogleService-Info.plist */; };
 		402B772CA4FAF07F6CD90AA4 /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB299A8BDC33FAF3220C3D5 /* Pods_DomainTests.framework */; };
 		79AF364D94EA0CA5F563B797 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB0B3F4848F80FB03DFB486 /* Pods_Domain.framework */; };
@@ -155,7 +159,6 @@
 		2E2D93552194566E005127B7 /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
 		2E2D936F21949404005127B7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		2E2D937121949412005127B7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		2E2D937321949462005127B7 /* LoginNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigator.swift; sourceTree = "<group>"; };
 		2E2D9379219494E3005127B7 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		2E2D937C219495D7005127B7 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		2E2D937E219495E2005127B7 /* Observable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
@@ -173,6 +176,11 @@
 		2E2D93AF2194AEAD005127B7 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
 		2E2D93B12194AEBE005127B7 /* FirebaseNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetwork.swift; sourceTree = "<group>"; };
 		2E2D93B32194AECD005127B7 /* Firebase+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Rx.swift"; sourceTree = "<group>"; };
+		2E350CDD2199BB8E007A51D2 /* LogoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewModel.swift; sourceTree = "<group>"; };
+		2E350CDF2199BB99007A51D2 /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
+		2E350CE32199BF25007A51D2 /* LogoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutUseCase.swift; sourceTree = "<group>"; };
+		2E350CE52199C2A5007A51D2 /* LogoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutUseCase.swift; sourceTree = "<group>"; };
+		2E350CE72199E565007A51D2 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		2E45CDB67503447E91685EF5 /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
 		2EF0E10721959CFD001A4858 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3591B7624491A7F264C2DC65 /* Pods-NetworkPlatformTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPlatformTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkPlatformTests/Pods-NetworkPlatformTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -378,6 +386,7 @@
 				2E2D934A219452EA005127B7 /* UseCasesProvider.swift */,
 				2E2D934D2194532D005127B7 /* LoginUseCase.swift */,
 				2E2D93552194566E005127B7 /* RegisterUseCase.swift */,
+				2E350CE32199BF25007A51D2 /* LogoutUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -386,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				2E2D93512194540E005127B7 /* UserInfos.swift */,
+				2E350CE72199E565007A51D2 /* Credentials.swift */,
 			);
 			path = Entries;
 			sourceTree = "<group>";
@@ -393,6 +403,7 @@
 		2E2D936C2194930E005127B7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2E350CDC219992EF007A51D2 /* Logout */,
 				2E2D936E21949320005127B7 /* Register */,
 				2E2D936D2194931B005127B7 /* Login */,
 			);
@@ -404,7 +415,6 @@
 			children = (
 				2E2D936F21949404005127B7 /* LoginViewModel.swift */,
 				2E2D937121949412005127B7 /* LoginViewController.swift */,
-				2E2D937321949462005127B7 /* LoginNavigator.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -478,8 +488,18 @@
 				2E2D93A92194AE8D005127B7 /* UseCasesProvider.swift */,
 				2E2D93AB2194AE96005127B7 /* LoginUseCase.swift */,
 				2E2D93AD2194AE9F005127B7 /* RegisterUseCase.swift */,
+				2E350CE52199C2A5007A51D2 /* LogoutUseCase.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		2E350CDC219992EF007A51D2 /* Logout */ = {
+			isa = PBXGroup;
+			children = (
+				2E350CDD2199BB8E007A51D2 /* LogoutViewModel.swift */,
+				2E350CDF2199BB99007A51D2 /* LogoutViewController.swift */,
+			);
+			path = Logout;
 			sourceTree = "<group>";
 		};
 		42794F613B4934DF54167213 /* Frameworks */ = {
@@ -1047,10 +1067,11 @@
 			files = (
 				2E2D9383219498BA005127B7 /* Application.swift in Sources */,
 				2E2D937F219495E2005127B7 /* Observable+Ext.swift in Sources */,
-				2E2D937421949462005127B7 /* LoginNavigator.swift in Sources */,
 				2E2D937221949412005127B7 /* LoginViewController.swift in Sources */,
+				2E350CE02199BB99007A51D2 /* LogoutViewController.swift in Sources */,
 				2E2D937A219494E3005127B7 /* ViewModelType.swift in Sources */,
 				2E2D9381219495EC005127B7 /* ErrorTracker.swift in Sources */,
+				2E350CDE2199BB8E007A51D2 /* LogoutViewModel.swift in Sources */,
 				2E2D937D219495D7005127B7 /* ActivityIndicator.swift in Sources */,
 				2E2D92D72194513C005127B7 /* AppDelegate.swift in Sources */,
 				2E2D937021949404005127B7 /* LoginViewModel.swift in Sources */,
@@ -1077,8 +1098,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E350CE82199E565007A51D2 /* Credentials.swift in Sources */,
 				2E2D93522194540E005127B7 /* UserInfos.swift in Sources */,
 				2E2D934B219452EA005127B7 /* UseCasesProvider.swift in Sources */,
+				2E350CE42199BF25007A51D2 /* LogoutUseCase.swift in Sources */,
 				2E2D93562194566E005127B7 /* RegisterUseCase.swift in Sources */,
 				2E2D934E2194532D005127B7 /* LoginUseCase.swift in Sources */,
 			);
@@ -1096,6 +1119,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E350CE62199C2A5007A51D2 /* LogoutUseCase.swift in Sources */,
 				2E2D93B02194AEAD005127B7 /* NetworkProtocol.swift in Sources */,
 				2E2D93B22194AEBE005127B7 /* FirebaseNetwork.swift in Sources */,
 				2E2D93B42194AECD005127B7 /* Firebase+Rx.swift in Sources */,

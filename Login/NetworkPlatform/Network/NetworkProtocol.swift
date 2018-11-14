@@ -13,11 +13,13 @@ public protocol NetworkProtocol {
     
     func initNetwork()
     
-    func isUserConnected() -> Observable<UserInfos?>
+    func isUserConnected() -> Single<Bool>
     
-    func login(email: String, password: String)  -> Observable<Bool>
+    func addAuthStateListener() -> Observable<UserInfos?>
     
-    func signOut() -> Observable<Bool>
+    func login(with credentials: Credentials)  -> Observable<Void>
     
-    func register(email: String, password: String) -> Observable<Bool>
+    func signOut() -> Observable<Void>
+    
+    func register(email: String, password: String) -> Observable<Void>
 }

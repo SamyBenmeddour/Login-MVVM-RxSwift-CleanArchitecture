@@ -12,4 +12,6 @@ public protocol UseCasesProvider {
         
     func makeRegisterUseCase() -> RegisterUseCase
     
+    func makeLogoutUseCase() -> LogoutUseCase
+    
 }

@@ -1,25 +1,23 @@
 //
-//  LoginViewController.swift
+//  LogoutViewController.swift
 //  Login
 //
-//  Created by Samy on 08/11/2018.
+//  Created by Samy on 12/11/2018.
 //  Copyright © 2018 Benmeddour. All rights reserved.
 //
 
+import UIKit
 
 import RxSwift
 import RxCocoa
-import UIKit
-import Domain
 
-class LoginViewController: UIViewController {
+class LogoutViewController : UIViewController {
     
+    private var viewModel: LogoutViewModel!
     private let disposeBag = DisposeBag()
-    private var viewModel: LoginViewModel!
     
-    @IBOutlet var emailField: UITextField!
-    @IBOutlet var passwordField: UITextField!
-    @IBOutlet var loginButton: UIButton!
+    @IBOutlet var uidLabel: UILabel!
+    @IBOutlet var logoutButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -28,16 +26,12 @@ class LoginViewController: UIViewController {
     }
     
     private func bindViewModel() {
+        self.viewModel = LogoutViewModel(service: Application.shared.useCasesProvider.makeLogoutUseCase())
         
-        self.viewModel = LoginViewModel(useCase: Application.shared
-                                                    .useCasesProvider
-                                                    .makeLoginUseCase())
-        
-        let input = LoginViewModel.Input(loginTrigger: loginButton.rx.tap.asDriver(),
-                                         email: emailField.rx.text.orEmpty.asDriver(),
-                                         password: passwordField.rx.text.orEmpty.asDriver())
+        let input = LogoutViewModel.Input(logoutTrigger: logoutButton.rx.tap.asDriver())
         
         let output = viewModel.transform(input: input)
+        
         
         var errorBinding: Binder<Error> {
             return Binder(self) { vc, error in
@@ -63,24 +57,25 @@ class LoginViewController: UIViewController {
         
         var dismissBinding: Binder<Void> {
             return Binder(self) { vc, _ in
-                vc.performSegue(withIdentifier: "LoginToLogout", sender: vc)
+                vc.performSegue(withIdentifier: "LogoutToLogin", sender: vc)
             }
         }
         
-        output.canLogin
-            .drive(loginButton.rx.isEnabled)
-            .disposed(by: disposeBag)
+        output.loading
+            .drive(loadingBinding)
+            .disposed(by: self.disposeBag)
         
         output.error
             .drive(errorBinding)
-            .disposed(by: disposeBag)
-        
-        output.loading
-            .drive(loadingBinding)
-            .disposed(by: disposeBag)
+            .disposed(by: self.disposeBag)
         
         output.dismiss
             .drive(dismissBinding)
-            .disposed(by: disposeBag)
+            .disposed(by: self.disposeBag)
+        
+        output.uid
+            .drive(self.uidLabel.rx.text)
+            .disposed(by: self.disposeBag)
+        
     }
 }

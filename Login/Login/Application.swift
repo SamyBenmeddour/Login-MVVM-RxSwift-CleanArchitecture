@@ -18,10 +18,6 @@ final class Application {
     public let services: NetworkProtocol
     public let useCasesProvider: Domain.UseCasesProvider
     
-    public lazy var isUserLogged : Observable<UserInfos?> = {
-        return services.isUserConnected()
-    }()
-    
     private init() {
         self.services = FirebaseNetwork()
         self.useCasesProvider = NetworkPlatform.UseCasesProvider(with: self.services)
@@ -30,6 +26,34 @@ final class Application {
     func configureNetwork() {
         services.initNetwork()
     }
+    
+    fileprivate func toLoginScreen(in window: UIWindow) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginVc = storyboard.instantiateViewController(withIdentifier: "LoginScene") as! LoginViewController
+        window.rootViewController = loginVc
+    }
+    
+    fileprivate func toLogoutScreen(in window: UIWindow) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let logoutVc = storyboard.instantiateViewController(withIdentifier: "LogoutScene") as! LogoutViewController
+        window.rootViewController = logoutVc
+    }
+    
+    func configureMainInterface(in window: UIWindow) {
+        self.services.isUserConnected().subscribe { event in
+            switch event {
+                case .success(let isConnected):
+                    isConnected ? self.toLogoutScreen(in: window) : self.toLoginScreen(in: window)
+                    break
+                case .error(let error):
+                    print("An error occured : \(error.localizedDescription)")
+                    self.toLoginScreen(in: window)
+                    break
+            }
+        }.disposed(by: DisposeBag())
+    }
+    
+    
     
     
 }

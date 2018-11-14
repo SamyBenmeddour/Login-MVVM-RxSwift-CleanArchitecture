@@ -14,30 +14,31 @@ import FirebaseDatabase
 import Domain
 
 public class FirebaseNetwork: NetworkProtocol {
-    
-    public init() {
-        
-    }
+
+    public init() {}
     
     public func initNetwork() {
         FirebaseApp.configure()
     }
     
-    public func login(email: String, password: String) -> Observable<Bool> {
-        return Auth.auth().rx_signinWithEmail(email: email, password: password)
+    public func login(with credentials: Credentials) -> Observable<Void> {
+        return Auth.auth().rx_signInWithCredentials(with: credentials).map {_ in}
     }
     
-    public func register(email: String, password: String) -> Observable<Bool> {
+    public func register(email: String, password: String) -> Observable<Void> {
         return Auth.auth().rx_createUserWithEmail(email: email, password: password)
     }
     
-    public func isUserConnected() -> Observable<UserInfos?> {
-        print("FirebaseNetwork.isUserConnected")
-        return Auth.auth().rx_addStateDidChangeListener()
+    public func signOut() -> Observable<Void> {
+        return Auth.auth().rx_signOut().map {_ in}
     }
     
-    public func signOut() -> Observable<Bool> {
-        return Auth.auth().rx_signOut()
+    public func isUserConnected() -> Single<Bool> {
+        return Auth.auth().rx_isUserConnected()
+    }
+    
+    public func addAuthStateListener() -> Observable<UserInfos?> {
+        return Auth.auth().rx_addStateDidChangeListener()
     }
     
 }
