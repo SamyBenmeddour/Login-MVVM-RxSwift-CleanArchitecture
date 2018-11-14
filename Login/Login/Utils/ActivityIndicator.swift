@@ -2,8 +2,8 @@
 //  ActivityIndicator.swift
 //  Login
 //
-//  Created by Samy on 08/11/2018.
-//  Copyright © 2018 Benmeddour. All rights reserved.
+// Created by sergdort on 03/02/2017.
+// Copyright (c) 2017 sergdort. All rights reserved.
 //
 
 import RxSwift
