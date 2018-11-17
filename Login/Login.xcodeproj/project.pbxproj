@@ -187,8 +187,8 @@
 		2E350CE52199C2A5007A51D2 /* LogoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutUseCase.swift; sourceTree = "<group>"; };
 		2E350CE72199E565007A51D2 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		2E45CDB67503447E91685EF5 /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
-		2E8DA5F8219DAAAB00644439 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = Login/Scenes/Login/RegisterViewController.swift; sourceTree = SOURCE_ROOT; };
-		2E8DA5FA219DAAE700644439 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = Login/Scenes/Login/RegisterViewModel.swift; sourceTree = SOURCE_ROOT; };
+		2E8DA5F8219DAAAB00644439 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = Login/Scenes/Register/RegisterViewController.swift; sourceTree = SOURCE_ROOT; };
+		2E8DA5FA219DAAE700644439 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = Login/Scenes/Register/RegisterViewModel.swift; sourceTree = SOURCE_ROOT; };
 		2EF0E10721959CFD001A4858 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2EF921B7219F868B003E07F2 /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
 		3591B7624491A7F264C2DC65 /* Pods-NetworkPlatformTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPlatformTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkPlatformTests/Pods-NetworkPlatformTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -413,8 +413,8 @@
 		2E2D936C2194930E005127B7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2EF921BA219F9BC1003E07F2 /* Register */,
 				2E350CDC219992EF007A51D2 /* Logout */,
-				2E2D936E21949320005127B7 /* Register */,
 				2E2D936D2194931B005127B7 /* Login */,
 			);
 			path = Scenes;
@@ -427,15 +427,6 @@
 				2E2D937121949412005127B7 /* LoginViewController.swift */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		2E2D936E21949320005127B7 /* Register */ = {
-			isa = PBXGroup;
-			children = (
-				2E8DA5F8219DAAAB00644439 /* RegisterViewController.swift */,
-				2E8DA5FA219DAAE700644439 /* RegisterViewModel.swift */,
-			);
-			path = Register;
 			sourceTree = "<group>";
 		};
 		2E2D9378219494D2005127B7 /* Common */ = {
@@ -512,6 +503,15 @@
 				2E350CDF2199BB99007A51D2 /* LogoutViewController.swift */,
 			);
 			path = Logout;
+			sourceTree = "<group>";
+		};
+		2EF921BA219F9BC1003E07F2 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				2E8DA5F8219DAAAB00644439 /* RegisterViewController.swift */,
+				2E8DA5FA219DAAE700644439 /* RegisterViewModel.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		42794F613B4934DF54167213 /* Frameworks */ = {
