@@ -14,7 +14,7 @@ public enum AuthenticationError : Error {
 
 extension AuthenticationError {
     
-    public var localizedDescription: String? {
+    public var localizedDescription: String {
         switch self {
             case .passwordConfirmationDoesNotMatch:
                 return "The password confirmation does not match"

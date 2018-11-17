@@ -11,6 +11,8 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+import Domain
+
 class RegisterViewController : UIViewController {
     
     private let disposeBag = DisposeBag()
@@ -44,8 +46,17 @@ class RegisterViewController : UIViewController {
         var errorBinding: Binder<Error> {
             return Binder(self) { vc, error in
                 
+                var message = error.localizedDescription
+                
+                if error is AuthenticationError {
+                    let myError = error as! AuthenticationError
+                    
+                    message = myError.localizedDescription
+                }
+                
+                
                 let alert = UIAlertController(title: "Error",
-                                              message: error.localizedDescription,
+                                              message: message,
                                               preferredStyle: .alert)
                 
                 let action = UIAlertAction(title: "Dismiss",
