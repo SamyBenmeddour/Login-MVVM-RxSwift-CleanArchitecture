@@ -19,9 +19,11 @@ final class LogoutUseCase: Domain.LogoutUseCase {
     
     func logout() -> Observable<Void> {
         return self.networkService.signOut()
+            .andThen(Observable.just(()))
     }
     
     func getUserInfos() -> Observable<UserInfos?> {
-        return self.networkService.addAuthStateListener()
+        return self.networkService.addAuthStateObserver()
+            .map { $0 }
     }
 }

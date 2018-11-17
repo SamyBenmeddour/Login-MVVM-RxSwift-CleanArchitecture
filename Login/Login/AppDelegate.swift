@@ -14,13 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+
         Application.shared.configureNetwork()
+        Application.shared.configureMainInterface(in: self.window!)
         
-        let _window = UIWindow(frame: UIScreen.main.bounds)
-        
-        Application.shared.configureMainInterface(in: _window)
-        
-        self.window = _window
         return true
     }
 

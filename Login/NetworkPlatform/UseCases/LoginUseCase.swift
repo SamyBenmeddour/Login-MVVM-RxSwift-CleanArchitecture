@@ -19,10 +19,12 @@ final class LoginUseCase: Domain.LoginUseCase {
     
     func login(with credentials: Credentials) -> Observable<Void> {
         return networkService.login(with: credentials)
+            .andThen(Observable.just(()))
     }
     
     func signOut() -> Observable<Void> {
         return networkService.signOut()
+            .andThen(Observable.just(()))
     }
     
     

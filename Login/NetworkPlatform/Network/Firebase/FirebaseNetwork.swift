@@ -8,8 +8,6 @@
 
 import RxSwift
 import Firebase
-import FirebaseAuth
-import FirebaseDatabase
 
 import Domain
 
@@ -21,23 +19,33 @@ public class FirebaseNetwork: NetworkProtocol {
         FirebaseApp.configure()
     }
     
-    public func login(with credentials: Credentials) -> Observable<Void> {
-        return Auth.auth().rx_signInWithCredentials(with: credentials).map {_ in}
+    public func login(with credentials: Credentials) -> Completable {
+        return Auth.auth().rx_signInWithCredentials(with: credentials)
     }
     
-    public func register(email: String, password: String) -> Observable<Void> {
-        return Auth.auth().rx_createUserWithEmail(email: email, password: password)
+    public func register(with credentials: RegistrationCredentials) -> Completable {
+        return Auth.auth().rx_createUserWithEmail(with: credentials)
     }
     
-    public func signOut() -> Observable<Void> {
-        return Auth.auth().rx_signOut().map {_ in}
+    public func saveUserInfos(name: String) -> Completable {
+        return Auth.auth().rx_getCurrentUser()
+            .map {
+                Auth.auth().rx_editProfileName(user: $0, name: name)
+            }
+            .flatMapCompletable {
+                $0
+            }
+    }
+    
+    public func signOut() -> Completable {
+        return Auth.auth().rx_signOut()
     }
     
     public func isUserConnected() -> Single<Bool> {
         return Auth.auth().rx_isUserConnected()
     }
     
-    public func addAuthStateListener() -> Observable<UserInfos?> {
+    public func addAuthStateObserver() -> Observable<UserInfos?> {
         return Auth.auth().rx_addStateDidChangeListener()
     }
     

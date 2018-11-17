@@ -15,11 +15,14 @@ public protocol NetworkProtocol {
     
     func isUserConnected() -> Single<Bool>
     
-    func addAuthStateListener() -> Observable<UserInfos?>
+    func addAuthStateObserver() -> Observable<UserInfos?>
     
-    func login(with credentials: Credentials)  -> Observable<Void>
+    func login(with credentials: Credentials)  -> Completable
     
-    func signOut() -> Observable<Void>
+    func signOut() -> Completable
     
-    func register(email: String, password: String) -> Observable<Void>
+    func register(with credentials: RegistrationCredentials) -> Completable
+    
+    func saveUserInfos(name: String) -> Completable
+    
 }

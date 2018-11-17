@@ -17,8 +17,26 @@ final class RegisterUseCase: Domain.RegisterUseCase {
         self.networkService = service
     }
     
-    func register(email: String, password: String) -> Observable<Void> {
-        return networkService.register(email: email, password: password)
+    fileprivate func checkPassword(passwords: RegistrationCredentials) -> Completable {
+        return Completable.create { completable in
+            if passwords.password == passwords.confirmation {
+                completable(.completed)
+            } else {
+                completable(.error(AuthenticationError.passwordConfirmationDoesNotMatch))
+            }
+            return Disposables.create()
+        }
+    }
+    
+    
+    func register(with credentials: RegistrationCredentials) -> Observable<Void> {
+
+        return self.checkPassword(passwords: credentials)
+            .andThen(self.networkService.register(with: credentials))
+            .andThen(self.networkService.saveUserInfos(name: credentials.name))
+            .andThen(Observable.just(()))
+
+        
     }
     
     

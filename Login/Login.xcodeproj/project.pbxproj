@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E050729219DBC3B0056AC81 /* RegistrationCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E050728219DBC3B0056AC81 /* RegistrationCredentials.swift */; };
 		2E2D92D72194513C005127B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D92D62194513C005127B7 /* AppDelegate.swift */; };
 		2E2D92DC2194513C005127B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2D92DA2194513C005127B7 /* Main.storyboard */; };
 		2E2D92DE2194513D005127B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E2D92DD2194513D005127B7 /* Assets.xcassets */; };
@@ -45,7 +46,10 @@
 		2E350CE42199BF25007A51D2 /* LogoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350CE32199BF25007A51D2 /* LogoutUseCase.swift */; };
 		2E350CE62199C2A5007A51D2 /* LogoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350CE52199C2A5007A51D2 /* LogoutUseCase.swift */; };
 		2E350CE82199E565007A51D2 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350CE72199E565007A51D2 /* Credentials.swift */; };
+		2E8DA5F9219DAAAB00644439 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8DA5F8219DAAAB00644439 /* RegisterViewController.swift */; };
+		2E8DA5FB219DAAE700644439 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8DA5FA219DAAE700644439 /* RegisterViewModel.swift */; };
 		2EF0E10821959CFD001A4858 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EF0E10721959CFD001A4858 /* GoogleService-Info.plist */; };
+		2EF921B8219F868B003E07F2 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF921B7219F868B003E07F2 /* AuthenticationError.swift */; };
 		402B772CA4FAF07F6CD90AA4 /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB299A8BDC33FAF3220C3D5 /* Pods_DomainTests.framework */; };
 		79AF364D94EA0CA5F563B797 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB0B3F4848F80FB03DFB486 /* Pods_Domain.framework */; };
 		B00353A8A601237B69483E74 /* Pods_NetworkPlatformTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C478BCEF76126426C57EE37 /* Pods_NetworkPlatformTests.framework */; };
@@ -135,6 +139,7 @@
 		0CB299A8BDC33FAF3220C3D5 /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27BA97C6A666C17D5DB8181B /* Pods-DomainTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests.release.xcconfig"; sourceTree = "<group>"; };
 		2DF20D57B1F72780F17A6AA3 /* Pods_LoginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E050728219DBC3B0056AC81 /* RegistrationCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCredentials.swift; sourceTree = "<group>"; };
 		2E2D92D32194513C005127B7 /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2D92D62194513C005127B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E2D92DB2194513C005127B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -182,7 +187,10 @@
 		2E350CE52199C2A5007A51D2 /* LogoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutUseCase.swift; sourceTree = "<group>"; };
 		2E350CE72199E565007A51D2 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		2E45CDB67503447E91685EF5 /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
+		2E8DA5F8219DAAAB00644439 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = Login/Scenes/Login/RegisterViewController.swift; sourceTree = SOURCE_ROOT; };
+		2E8DA5FA219DAAE700644439 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = Login/Scenes/Login/RegisterViewModel.swift; sourceTree = SOURCE_ROOT; };
 		2EF0E10721959CFD001A4858 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2EF921B7219F868B003E07F2 /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
 		3591B7624491A7F264C2DC65 /* Pods-NetworkPlatformTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPlatformTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkPlatformTests/Pods-NetworkPlatformTests.release.xcconfig"; sourceTree = "<group>"; };
 		388752E77013EE32C2F01A6C /* Pods_NetworkPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C444B8D981746AAF914B672 /* Pods-LoginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginTests/Pods-LoginTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -396,6 +404,8 @@
 			children = (
 				2E2D93512194540E005127B7 /* UserInfos.swift */,
 				2E350CE72199E565007A51D2 /* Credentials.swift */,
+				2E050728219DBC3B0056AC81 /* RegistrationCredentials.swift */,
+				2EF921B7219F868B003E07F2 /* AuthenticationError.swift */,
 			);
 			path = Entries;
 			sourceTree = "<group>";
@@ -422,6 +432,8 @@
 		2E2D936E21949320005127B7 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				2E8DA5F8219DAAAB00644439 /* RegisterViewController.swift */,
+				2E8DA5FA219DAAE700644439 /* RegisterViewModel.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -1066,11 +1078,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E2D9383219498BA005127B7 /* Application.swift in Sources */,
+				2E8DA5F9219DAAAB00644439 /* RegisterViewController.swift in Sources */,
 				2E2D937F219495E2005127B7 /* Observable+Ext.swift in Sources */,
 				2E2D937221949412005127B7 /* LoginViewController.swift in Sources */,
 				2E350CE02199BB99007A51D2 /* LogoutViewController.swift in Sources */,
 				2E2D937A219494E3005127B7 /* ViewModelType.swift in Sources */,
 				2E2D9381219495EC005127B7 /* ErrorTracker.swift in Sources */,
+				2E8DA5FB219DAAE700644439 /* RegisterViewModel.swift in Sources */,
 				2E350CDE2199BB8E007A51D2 /* LogoutViewModel.swift in Sources */,
 				2E2D937D219495D7005127B7 /* ActivityIndicator.swift in Sources */,
 				2E2D92D72194513C005127B7 /* AppDelegate.swift in Sources */,
@@ -1104,6 +1118,8 @@
 				2E350CE42199BF25007A51D2 /* LogoutUseCase.swift in Sources */,
 				2E2D93562194566E005127B7 /* RegisterUseCase.swift in Sources */,
 				2E2D934E2194532D005127B7 /* LoginUseCase.swift in Sources */,
+				2EF921B8219F868B003E07F2 /* AuthenticationError.swift in Sources */,
+				2E050729219DBC3B0056AC81 /* RegistrationCredentials.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,52 +8,77 @@
 
 import FirebaseAuth
 import RxSwift
-import Foundation
+
 import Domain
 
-extension Auth {
+internal extension Auth {
     
-    func rx_signInWithCredentials(with credentials: Credentials) -> Observable<Bool> {
-        return Observable.create { observer in
+    internal func rx_signInWithCredentials(with credentials: Credentials) -> Completable {
+        return Completable.create { completable in
             self.signIn(withEmail: credentials.email, password: credentials.password, completion: { (user, error) in
                 if let error = error {
-                    observer.onError(error)
+                    completable(.error(error))
                 } else {
-                    observer.onNext(true)
+                    completable(.completed)
                 }
-                observer.onCompleted()
             })
             return Disposables.create()
         }
     }
     
-    func rx_signOut() -> Observable<Bool> {
-        return Observable.create { observer in
+    internal func rx_signOut() -> Completable {
+        return Completable.create { completable in
             do {
                 try self.signOut()
-                observer.onNext(true)
+                completable(.completed)
             } catch let error {
-                observer.onError(error)
+                completable(.error(error))
             }
-            observer.onCompleted()
             return Disposables.create()
         }
     }
     
-    func rx_createUserWithEmail(email: String, password: String) -> Observable<Void> {
-        return Observable.create { observer in
-            self.createUser(withEmail: email, password: password, completion: { (user, error) in
-                if let error = error {
-                    observer.onError(error)
-                } else {
-                    observer.onCompleted()
+    internal func rx_getCurrentUser() -> Single<User> {
+        return Single.create { single in
+            if self.currentUser != nil {
+                single(.success(self.currentUser!))
+            } else {
+                single(.error(AuthenticationError.passwordConfirmationDoesNotMatch))
+            }
+            return Disposables.create()
+        }
+    }
+    
+    internal func rx_createUserWithEmail(with credentials: RegistrationCredentials) -> Completable {
+        return Completable.create { completable in
+            self.createUser(withEmail: credentials.email, password: credentials.password, completion: { (user, error) in
+                guard let error = error else {
+                    completable(.completed)
+                    return
                 }
+                completable(.error(error))
             })
+            return Disposables.create()
+        }
+    }
+    
+    internal func rx_editProfileName(user: User, name: String) -> Completable {
+        return Completable.create { completable in
+            let changeRequest = user.createProfileChangeRequest()
+            changeRequest.displayName = name
+            
+            changeRequest.commitChanges { error in
+                if let error = error {
+                    completable(.error(error))
+                } else {
+                    completable(.completed)
+                }
+            }
             return Disposables.create()
         }
     }
 
-    func rx_addStateDidChangeListener() -> Observable<UserInfos?> {
+    internal func rx_addStateDidChangeListener() -> Observable<UserInfos?> {
         return Observable.create { observer in
             self.addStateDidChangeListener { (auth, user) in
                 guard let _user = user else {
@@ -66,7 +91,7 @@ extension Auth {
         }
     }
     
-    func rx_isUserConnected() -> Single<Bool> {
+    internal func rx_isUserConnected() -> Single<Bool> {
         return Single<Bool>.create {single in
             single(.success(self.currentUser != nil))
             return Disposables.create()

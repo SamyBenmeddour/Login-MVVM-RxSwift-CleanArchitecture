@@ -9,5 +9,7 @@
 import RxSwift
 
 public protocol RegisterUseCase {
-    func register(email: String, password: String) -> Observable<Void>
+    
+    func register(with credentials: RegistrationCredentials) -> Observable<Void>
+    
 }
